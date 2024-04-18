@@ -1,0 +1,194 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-size: auto;
+  color: #5f2525;
+  
+
+
+}
+
+
+
+.container {
+  max-width: 650px;
+  padding: 0px;
+  background: rgba(245, 242, 242, 0.4);
+  z-index: 1;
+}
+
+.header {
+  text-align: center;
+  font-size: 0.7em;
+  padding: 20px;
+  color: #fff;
+  position: relative; /* Position relative for absolute positioning of icons */
+}
+
+.logo {
+  font-size: 1.5em;
+  color: #f5a623;
+  margin-bottom: 20px; 
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+  position: relative; /* Position relative for absolute positioning of icons */
+}
+
+.login-form input {
+  width: calc(100% - 40px); /* Adjust width to accommodate icon */
+  margin: 10px 0;
+  padding: 10px 30px 10px 10px; /* Adjust padding to accommodate icon */
+  font-size: 1.2em;
+  border: 1px solid #fff;
+  background-color: rgb(73, 69, 69);
+  color: #fff;
+  position: relative; /* Position relative for absolute positioning of icons */
+}
+
+.login-form input[type="password"] {
+  padding-right: 30px; /* Adjust padding to accommodate password icon */
+}
+
+
+.login-form .fa-lock {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(100%);
+  color: #fff;
+}
+
+.login-form button {
+  margin: 10px 0;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  border: 1px solid #fff;
+  background: #fff;
+  color: #f5a623;
+  cursor: pointer;
+}
+
+.login-form input::before,
+.login-form input::after {
+  content: '';
+  position: absolute;
+  border: 1px solid #4d2222;
+  width: calc(100% - 20px); /* Adjust the width of the lines */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.login-form input::before {
+  left: 0;
+}
+
+.login-form input::after {
+  right: 0;
+}
+header,h2{
+display: flex;
+justify-content: start;
+margin: 0;
+padding: 0;
+}
+
+.footer {
+  text-align: center;
+  font-size: 1.2em;
+  padding: 20px;
+  background: rgba(133, 113, 113, 0.1);
+  color: #fff;
+}
+.cool_line{ 
+display:block;
+border:none;
+color:white;
+height:1px;
+background:lightgray;
+background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(lightgray), to(#fff));
+}
+
+/* Style for forgot password link */
+.login-row .forgot-password {
+text-decoration: none;
+color: #dadada; /* Change link color as needed */
+margin-right: 10px; /* Adjust spacing between "Forgot Password?" and the button */
+}
+
+/* Style for the arrow symbol */
+.login-row .forgot-password .arrow {
+font-weight: 100; /* Adjust font weight to make it thinner */
+}
+
+/* Style for login button */
+.login-row button {
+background: rgba(209, 189, 189, 0.4);
+color: #ffffff; /* Change text color as needed */
+border: none;
+padding: 10px 20px; /* Adjust padding as needed */
+cursor: pointer;
+margin-left: 80px;
+border-radius: 2px black solid transparent; 
+}
+
+
+
+.error-message {
+  color: red;
+  font-size: 1em; /* Adjust the font size as needed */
+  margin-top: 5px; /* Adjust the margin top as needed */
+}
+
+.input-error {
+  border-color: red !important; /* Change input border color to red */
+}
+
+
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+  background: rgba(4, 44, 44, 0.651);
+}
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  background-image: url("./background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  opacity: 0.8;
+}
+
+.js-count-particles {
+  font-size: 1.1em;
+  
+}
+#stats,
+.count-particles {
+  -webkit-user-select: none;
+  margin-top: 5px;
+  margin-left: 5px;
+  
+}
+#stats {
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+  
+}
+.count-particles {
+  border-radius: 0 0 3px 3px;
+  
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="./awedxcvbn.css">
+    
+</head>
+<body>
+   <div class="container">
+    <img src="./login.jpg" class="log" alt="Logo">
+       <div class="header">
+         <h2 ><i class="far fa-user"></i>Sign In</h2>
+         <hr>
+         <form class="login-form" id="loginForm">
+            <input type="text" id="usernameInput" placeholder="Username">
+            <input type="password" id="passwordInput" placeholder="Password"><i class="fas fa-lock"></i>
+            <p id="errorMessage" class="error-message"></p>
+         </form>
+       </div>
+       <div class="login-row">
+        <a href="#" class="forgot-password"><span class="arrow">&#8592;</span> Forgot Password?</a>
+        <button id="loginButton"><i class="fas fa-key"></i>Secure Login</button>
+       </div>
+       <div class="footer">
+           <p>Powered By KG HAWES, LLC.</p>
+       </div>
+   </div>
+
+   <div id="particles-js"></div> <!-- stats - count particles -->
+<div class="count-particles"> <span class="js-count-particles">--</span></div> <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
+<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib -->
+<script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+<script src="./login.js"></script>
+   <script>
+
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const loginForm = document.getElementById('loginForm');
+        const usernameInput = document.getElementById('usernameInput');
+        const passwordInput = document.getElementById('passwordInput');
+        const errorMessage = document.getElementById('errorMessage');
+        const loginButton = document.getElementById('loginButton');
+
+        loginButton.addEventListener('click', function () {
+            const username = usernameInput.value.trim();
+            const password = passwordInput.value.trim();
+
+            // Reset error styles
+            usernameInput.classList.remove('input-error');
+            passwordInput.classList.remove('input-error');
+            errorMessage.textContent = '';
+
+            if (username === '' || password === '') {
+                errorMessage.textContent = 'Username and password are required.';
+                if (username === '') {
+                    usernameInput.classList.add('input-error');
+                }
+                if (password === '') {
+                    passwordInput.classList.add('input-error');
+                }
+            } else if (username.length < 4 || username.length > 20) {
+                errorMessage.textContent = 'Username must be between 4 and 20 characters.';
+                usernameInput.classList.add('input-error');
+            } else if (password.length < 6) {
+                errorMessage.textContent = 'Password must be at least 6 characters.';
+                passwordInput.classList.add('input-error');
+            } else {
+                console.log('Username:', username);
+                console.log('Password:', password);
+                // Reset input fields
+                usernameInput.value = '';
+                passwordInput.value = '';
+            }
+        });
+    });
+
+    
+</script>
+
+
+
+
+
+
+  </body>
+  </html>
